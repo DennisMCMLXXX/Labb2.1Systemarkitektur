@@ -5,8 +5,8 @@ public class Client {
 	public static void main(String[] args) {
 		Client Dice = new Client();
 
-		System.out.println("Dice emulator!\nPick a number for specified dice!");
-		System.out.println("1.D6\n2.D8\n3.D12\n4.D20\n0 = quit");	
+		System.out.println("Dice emulator!\nPick a number for specified dice!\n");
+		System.out.println("Any other number quits\n1.D6\n2.D8\n3.D12\n4.D20");	
 		int nr = 5;
 		
 		while (nr != 0) {
@@ -14,24 +14,23 @@ public class Client {
 			Scanner sc = new Scanner(System.in);
 			nr = sc.nextInt();
 			
-				if (nr == 1);{
+				if (nr == 1) {
 					Dice.D6();
 				}
-				if (nr == 2);{
+				else if (nr == 2) {
 					Dice.D8();
 					}
-				if (nr == 3);{
+				else if (nr == 3) {
 					Dice.D12();
 					}
-				if (nr == 4);{
+				else if (nr == 4){
 					Dice.D20();
 					}
-				if (nr > 4); {
-					System.out.println("Not a valid number");
-					}
-				if (nr == 0);{
+				else {
+					System.out.println("Exit, thanx for the roll!");
 					break;
-					}
+					
+				}
 		}
 	}
 	private void D6() {
