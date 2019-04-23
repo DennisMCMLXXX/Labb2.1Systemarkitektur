@@ -9,28 +9,30 @@ public class Client {
 		System.out.println("1.D6\n2.D8\n3.D12\n4.D20\n0 = quit");	
 		int nr = 5;
 		
-		do {
+		while (nr != 0) {
 
 			Scanner sc = new Scanner(System.in);
 			nr = sc.nextInt();
 			
-				if(nr == 1);
+				if (nr == 1);{
 					Dice.D6();
-					
-				if (nr == 2);
+				}
+				if (nr == 2);{
 					Dice.D8();
-					
-				if (nr == 3);
+					}
+				if (nr == 3);{
 					Dice.D12();
-					
-				if (nr == 4);
+					}
+				if (nr == 4);{
 					Dice.D20();
-					
-				if (nr == 0);
-					break;	
+					}
+				if (nr > 4); {
+					System.out.println("Not a valid number");
+					}
+				if (nr == 0);{
+					break;
+					}
 		}
-		while (nr !=0);
-
 	}
 	private void D6() {
 		AbstractFactory AF = new ConcreteFactory1();
