@@ -27,27 +27,31 @@ public class Client {
 					Dice.D20();
 					}
 				else {
-					System.out.println("Exit, thanx for the roll!");
+					System.out.println("Exit! Keep on rollin...");
 					break;
 					
 				}
 		}
 	}
+	//ProductA1
 	private void D6() {
 		AbstractFactory AF = new ConcreteFactory1();
 		AbstractProductA APA_D6 = AF.CreateProductA();
 		APA_D6.productA();
 	}
+	//ProductB1
 	private void D8() {
 		AbstractFactory AF = new ConcreteFactory1();
 		AbstractProductB  APB_D8 = AF.CreateProductB();
 		APB_D8.productB();
 	}
+	//ProductA2
 	private void D12() {
 		AbstractFactory AF2 = new ConcreteFactory2();
 		AbstractProductA APA2_D12 = AF2.CreateProductA();
 		APA2_D12.productA();
 	}
+	//ProductB2
 	private void D20() {
 		AbstractFactory AF2 = new ConcreteFactory2();
 		AbstractProductB APB2_D20 = AF2.CreateProductB();
